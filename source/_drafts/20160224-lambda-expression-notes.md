@@ -1,4 +1,7 @@
-# Java Lambda 表达式学习笔记
+title: "Java Lambda 表达式学习笔记"
+date: 2016-02-24
+tags: [Java, Lambda]
+---
 
 Java Lambda 表达式时 Java 8 引入的一个新的功能，可以说是模拟函数式编程的一个语法糖，类似于 Javascript 中的闭包，但又有些不同，主要目的是提供一个函数化的语法来简化我们的编码。<!--more-->
 
@@ -55,7 +58,7 @@ Stream 的几个特征：
 - 单向迭代，迭代一次后数据就用尽了
 - 支持并行操作
 
-常见的获取 Stream 的方式
+### 常见的获取 Stream 的方式
 
 - 从集合中获取
   - Collection.stream();
@@ -68,6 +71,135 @@ Stream 的几个特征：
 这里只是个简单的介绍，下面会有具体的应用。
 
 ## 举例
+
+以下的demo依赖于 Employee 对象，以及由 Employee 对象组成的 List 对象。
+
+```java
+public class Employee {
+	
+	private String name;
+	private String sex;
+	private int age;
+	
+	public Employee(String name, String sex, int age) {
+		super();
+		this.name = name;
+		this.sex = sex;
+		this.age = age;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	public String getSex() {
+		return sex;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Employee {name=").append(name).append(", sex=").append(sex).append(", age=").append(age)
+				.append("}");
+		return builder.toString();
+	}	
+}
+```
+
+``` java
+List<Employee> employees = new ArrayList<>();
+employees.add(new Employee("张三", "男", 25));
+employees.add(new Employee("李四", "女", 24));
+employees.add(new Employee("王五", "女", 23));
+employees.add(new Employee("周六", "男", 22));
+employees.add(new Employee("孙七", "女", 21));
+employees.add(new Employee("刘八", "男", 20));
+```
+
+### 打印所有员工
+
+Collection 提供了 forEach 方法，供我们逐个操作单个对象。
+
+```java
+employees.forEach(e -> System.out.println(e)); 
+或者
+employees.stream().forEach(e -> System.out.println(e)); 
+```
+
+### 按年龄排序
+
+```java
+Collections.sort(employees, (e1, e2) -> e1.getAge() - e2.getAge());
+employees.forEach(e -> System.out.println(e));
+或者
+employees.stream().sorted((e1, e2) -> e1.getAge() - e2.getAge()).forEach(e -> System.out.println(e)); 
+```
+
+### 打印年龄最大的女员工
+
+max/min 返回指定排序条件下最大/最小的元素
+
+```java
+Employee maxAgeFemaleEmployee = employees.stream()
+		.filter(e -> "女".equals(e.getSex()))
+		.max((e1, e2) -> e1.getAge() - e2.getAge())
+		.get();
+System.out.println(maxAgeFemaleEmployee);
+```
+
+### 打印出年龄大于20 的男员工
+
+filter 可以过滤出符合条件的元素
+
+```java
+employees.stream()
+		.filter(e -> e.getAge() > 20 && "男".equals(e.getSex()))
+		.forEach(e -> System.out.println(e));
+```
+
+### 打印出年龄最大的2名男员工
+
+limit 方法截取有限的元素
+
+```java
+employees.stream()
+		.filter(e -> "男".equals(e.getSex()))
+		.sorted((e1, e2) -> e2.getAge() - e1.getAge())
+		.limit(2)
+		.forEach(e -> System.out.println(e));
+```
+
+### 打印出所有男员工的姓名，使用 , 分隔
+
+map 将 Stream 中所有元素的执行给定的函数后返回值组成新的 Stream
+
+```java
+String maleEmployeesNames = employees.stream()
+		.map(e -> e.getName())
+		.collect(Collectors.joining(","));
+System.out.println(maleEmployeesNames);
+```
+
+### 统计信息
+
+IntSummaryStatistics, DoubleSummaryStatistics, LongSummaryStatistics 包含了 Stream 中的汇总数据。
+
+```java
+IntSummaryStatistics stat = employees.stream()
+		.mapToInt(Employee::getAge).summaryStatistics();
+System.out.println("员工总数：" + stat.getCount());
+System.out.println("最高年龄：" + stat.getMax());
+System.out.println("最小年龄：" + stat.getMin());
+System.out.println("平均年龄：" + stat.getAverage());
+```
+
+## 总结
+
+Lambda 表达式确实可以减少很多代码，能提高生产力，当然也有弊端，就是复杂的表达式可读性会比较差，也可能是还不是很习惯的缘故吧。
 
 ## 参考资料
 
