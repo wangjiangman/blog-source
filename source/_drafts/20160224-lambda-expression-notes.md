@@ -1,6 +1,6 @@
 # Java Lambda 表达式学习笔记
 
-Java Lambda 表达式可以说是模拟函数式编程的一个语法糖，类似于 Javascript 中的闭包，但又有些不同，主要目的是提供一个函数化的语法来简化我们的编码。<!--more-->
+Java Lambda 表达式时 Java 8 引入的一个新的功能，可以说是模拟函数式编程的一个语法糖，类似于 Javascript 中的闭包，但又有些不同，主要目的是提供一个函数化的语法来简化我们的编码。<!--more-->
 
 ## Lambda 基本语法
 
@@ -45,3 +45,31 @@ new Thread(r).start();
 除了 Runnable, Comparator ，其他的函数式接口还有：Consumer, Predicate 等。
 
 有时候我们需要自己实现一个函数式接口，做法也很简单，首先你要保证此接口只能有一个函数操作，然后在接口类型上标注注解 @FunctionalInterface 即可。
+
+## Stream 对象
+
+什么是 Stream ? 这里的 Stream 不同于 io 中的 InputStream 和 OutputStream，Stream 位于包 java.util.stream 中， 也是 java 8 新加入的，Stream 只的是一组支持串行并行聚合操作的元素，可以理解为集合或者迭代器的增强版。什么时聚合操作？简单举例来说常见的有平均值、最大值、最小值、总和、排序、过滤等。
+
+Stream 的几个特征：
+
+- 单向迭代，迭代一次后数据就用尽了
+- 支持并行操作
+
+常见的获取 Stream 的方式
+
+- 从集合中获取
+  - Collection.stream();
+  - Collection.parallelStream();
+- 静态工厂
+  - Arrays.stream(array) 
+  - Stream.of(T ...)
+  - IntStream.range()
+
+这里只是个简单的介绍，下面会有具体的应用。
+
+## 举例
+
+## 参考资料
+
+- https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/
+
