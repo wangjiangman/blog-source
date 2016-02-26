@@ -278,7 +278,8 @@ Stream 的几个特征：
   - Stream.of(T ...)
   - IntStream.range()
 
-这里只是个简单的介绍，下面会有具体的应用。
+这里只对 Stream 做简单的介绍，下面会有具体的应用。要说 Stream 与 Lambda 表达式有什么关系，其实并没有什么特别紧密的关系，只是 Lambda 表达式极大的方便了 Stream 的使用。如果没有 Lambda 表达式，使用 Stream 的过程中会产生大量的匿名类，非常别扭。
+
 
 ## 举例
 
