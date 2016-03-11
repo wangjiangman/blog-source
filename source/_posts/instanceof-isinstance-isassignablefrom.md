@@ -1,6 +1,7 @@
 title: "instanceof, isInstance, isAssignableFroms"
 date: 2014-04-14
 tags: Java
+categories: 技术
 ---
 
 在一些工具代码或者通用操作逻辑中，在运行时了解一个对象的实际类型有时候是很有必要的。对于如何检查当前对象的类型，或者与父类型、其他类型进行比较，Java为我们提供了如下途径：

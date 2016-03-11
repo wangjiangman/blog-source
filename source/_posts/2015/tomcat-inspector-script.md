@@ -1,6 +1,7 @@
 title: "Tomcat 监测脚本"
 date: 2015-10-29
 tags: [Tomcat,Java,Shell]
+categories: 技术
 ---
 
 通过 Tomcat 监测脚本 按照一定的时间频度来检测Tomcat应用是否正常，如果进程不存在，则启动 Tomcat；如果进程存在而访问不正常，则杀掉进程，再启动 Tomcat。 <!--more-->

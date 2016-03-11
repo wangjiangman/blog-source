@@ -1,6 +1,7 @@
 title: "IE XDomainRequest 学习笔记"
 date: 2013-07-13
 tags: Web Front
+categories: 技术
 ---
 
 W3C CORS（跨域资源共享）是对于跨域请求的一个规范，目前各个主流浏览器都实现了这个规范，IE8开始，增加了XDomainRequest作为跨域请求的对象，而Firefox与Chrom则CORS直接实现在XMLHttpRequest对象中，更方便使用。不过IE10中，XMLHttpRequest对象也实现了CORS。本文主要总结 XDomainRequest 对象一些使用方法。<!--more-->

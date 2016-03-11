@@ -1,6 +1,7 @@
 title: "设计模式学习 - Decorator Pattern"
 date: 2013-02-03
 tags: 设计模式
+categories: 技术
 ---
 
 Decorator Pattern （装饰者模式）提供了动态增加对象行为的方式，他在原有对象的基础上动态的增加额外的职责。基本结构如下：

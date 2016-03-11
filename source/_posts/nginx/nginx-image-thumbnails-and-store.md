@@ -1,6 +1,7 @@
 title: "Nginx 插件实现缩略图并本地缓存"
 date: 2015-06-02
 tags: Nginx
+categories: 技术
 ---
 
 Nginx 带了图片插件 http_image_filter_module，可以很方便的实现缩略图功能，只是默认的情况下并不会安装，需要自己编译安装才能行。编译安装的步骤参考 [CentOS 编译安装 nginx 并配置缩略图插件](/nginx/centos-nginx-configure-make-install.html) .

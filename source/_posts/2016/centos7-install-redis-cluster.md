@@ -1,6 +1,7 @@
 title: "CentOS 7 安装 redis 3.0.6 集群"
 date: 2016-01-30
 tags: [CentOS, Redis, Linux]
+categories: 技术
 ---
 
 本文记录 CentOS 7 下 安装 redis 3.0.6 并配置集群的过程。 <!--more-->

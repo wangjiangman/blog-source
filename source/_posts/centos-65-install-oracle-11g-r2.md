@@ -1,6 +1,7 @@
 title: "centos 6.5 安装 oracle 11gR2 及配置Oracle自动启动"
 date: 2015-03-29
 tags: [Linux, Oracle]
+categories: 技术
 ---
 
 CentOS 下安装 Oracle 是一件比较麻烦的事情，这里记录了在 centos 6.5 下安装 oracle 11gR2的前的配置步骤，以及安装完成后，如何设置为随系统自动启动。配置完成后，启动图形化安装，没有什么可说的，本文就没有一一截图，掠过了。<!-- more -->

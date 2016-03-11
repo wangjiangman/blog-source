@@ -1,6 +1,7 @@
 title: "JAVA 一些基础知识点滴"
 date: 2013-01-19
 tags: Java
+categories: 技术
 ---
 
 本文主要是记录一些java的基础知识，发现什么记什么，没有什么次序性。<!--more-->

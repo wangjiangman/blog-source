@@ -1,6 +1,7 @@
 title: "Git对于SVN的优势"
 date: 2013-03-12
-tags: 
+tags: [git]
+categories: 技术
 ---
 
 Git是一个相当出色的版本控制工具，相对于SVN，Git有很多优势。

@@ -1,5 +1,6 @@
 title: "Amazon 内部软件设计原则"
 date: 2016-01-30
+categories: 技术
 ---
 
 网上摘录的一段文字，对 Amazon 内部软件的设计规定非常有感触，非常认同。<!--more-->

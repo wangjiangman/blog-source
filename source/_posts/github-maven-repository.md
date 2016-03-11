@@ -1,6 +1,7 @@
 title: "使用github作为maven仓库"
 date: 2014-06-17
 tags: [git, maven]
+categories: 技术
 ---
 
 本文介绍的这种使用 github 作为 maven 仓库的思路主要为：

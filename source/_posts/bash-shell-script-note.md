@@ -1,6 +1,7 @@
 title: "bash shell 编程学习注记"
 date: 2013-05-07
 tags: Linux
+categories: 技术
 ---
 
 常用shell有很多：bourne shell(/usr/bin/sh或者/bin/sh), Bourne Again Shell(/bin/bash), C Shell(/usr/bin/csh), K Shell(/usr/bin/ksh), Shell for Root(/sbin/sh)。每种shell都有自己的用法和语法。今天我主要学习的是 bash，因为bash比较广泛，是很多linux的默认shell。<!--more-->

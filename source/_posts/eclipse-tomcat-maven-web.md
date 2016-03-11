@@ -1,6 +1,7 @@
 title: "在 Eclipse 中用 tomcat 调试 maven web 工程"
 date: 2013-01-20
 tags: Java
+categories: 技术
 ---
 
 在 Eclipse 中用 Jetty 调试 maven web 工程是很方便的，但是大家一般习惯tomcat，这里说一下如何在配置到tomcat中运行。<!--more-->

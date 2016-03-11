@@ -1,6 +1,7 @@
 title: "软件架构模式的种类"
 date: 2014-02-15
 tags: 
+categories: 技术
 ---
 
 在做软件架构设计时,根据不同的抽象层次可分为三种不同层次的模式：架构模式(Architectural Pattern)、设计模式(Design Pattern)、代码模式(Coding Pattern)。

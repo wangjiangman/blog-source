@@ -1,6 +1,7 @@
 title: "Tomcat 配置汇总"
 date: 2013-01-07
 tags: Tomcat
+categories: 技术
 ---
 
 ## Tomcat6 配置线程池

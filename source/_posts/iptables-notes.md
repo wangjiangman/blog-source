@@ -1,6 +1,7 @@
 title: "iptables 使用笔记"
 date: 2015-03-31 23:08:09
 tags: [Linux, iptables]
+categories: 技术
 ---
 
 iptables 是 linux 下的防火墙程序，在所有的 linux 发行版中都能使用。

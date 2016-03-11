@@ -1,6 +1,7 @@
 title: "原生 JSON 工具类对象"
 date: 2013-07-03
 tags: Web Front
+categories: 技术
 ---
 
 今天才知道原生的JSON对象，惭愧惭愧， 这里对他的用法做一下记录。

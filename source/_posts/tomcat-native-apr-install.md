@@ -1,6 +1,7 @@
 title: "Tomcat 安装配置 Native APR 模式"
 date: 2015-08-04
 tags: Tomcat
+categories: 技术
 ---
 
 APR 能大幅提高 tomcat 的性能是不争的事实，但我并没有做过性能比较测试。本文记录 CentOS 6.5 下为 tomcat 7 安装和配置 APR 模式的步骤和过程。 

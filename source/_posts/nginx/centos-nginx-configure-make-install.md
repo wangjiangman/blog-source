@@ -1,6 +1,7 @@
 title: "CentOS 编译安装 nginx 并配置缩略图插件"
 date: 2015-05-28
 tags: [Linux, Nginx]
+categories: 技术
 ---
 
 yum安装nginx 非常方便，但是有些插件并不会默认安装，比如 http_image_filter_module， 因此我们需要编译安装 nginx，已达到我们的目的。

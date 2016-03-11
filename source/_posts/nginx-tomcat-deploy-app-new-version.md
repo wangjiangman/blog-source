@@ -1,6 +1,7 @@
 title: "Nginx+tomcat 负载均衡发布应用新版本"
 date: 2014-07-20
 tags: 运维
+categories: 技术
 ---
 
 本文记录在 [Nginx+tomcat 负载均衡环境](/ubuntu-keepalived-nginx-tomcat-load-lalance.html) 下，当需要发布新版的tomcat应用时采取的几种方法。<!--more-->

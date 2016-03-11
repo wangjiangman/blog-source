@@ -1,6 +1,7 @@
 title: "CentOS 7 安装 mysql 5.7.10"
 date: 2016-01-15
 tags: [Mysql,Linux,CentOS]
+categories: 技术
 ---
 
 本文记录 CentOS 7 下安装 mysql 5.7.10 及简单的配置步骤。<!--more-->

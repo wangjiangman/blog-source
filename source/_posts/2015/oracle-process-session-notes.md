@@ -1,6 +1,7 @@
 title: "Oracle 进程、连接相关"
 date: 2015-10-23
 tags: [Oracle]
+categories: 技术
 ---
 
 默认情况下，Oracle 允许的最大进程数为 150，这往往不能满足实际环境的要求，因此我们需要修改进程数和会话数的配置。<!--more-->

@@ -1,6 +1,7 @@
 title: "cron 学习笔记"
 date: 2015-09-07
 tags: [Linux]
+categories: 技术
 ---
 
 cron 是 linux/unix 下的一个计划任务管理工具，相当于 Windows 下的计划任务，可以帮助我们按计划、定时的执行某些指定的任务，本文是在使用过程中做的简单的笔记。

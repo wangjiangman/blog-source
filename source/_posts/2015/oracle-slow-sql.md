@@ -1,6 +1,7 @@
 title: "oracle 查看执行最慢 sql"
 date: 2015-08-21
 tags: [Oracle]
+categories: 技术
 ---
 
 **查询执行最慢的sql**

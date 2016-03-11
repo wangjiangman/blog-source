@@ -1,6 +1,7 @@
 title: "CentOS yum install nginx"
 date: 2015-06-01
 tags: [Linux, Nginx]
+categories: 技术
 ---
 
 Install Nginx by yum on CentOS 6.5 . See the follows. <!--more-->

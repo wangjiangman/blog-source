@@ -1,6 +1,7 @@
 title: "CentOS 6.5 安装远程桌面工具 xrdp 0.6.1"
 date: 2015-03-26
 tags: [Linux, CentOS]
+categories: 技术
 ---
 
 linux 远程桌面工具中，除了 vnc ，xrdp也是很不错的，连接速度很快，直接使用微软的远程桌面工具mstsc即可链接。下面整理一下安装配置步骤。<!-- more -->

@@ -1,6 +1,7 @@
 title: "centos 6.5 安装 oracle jdk 8u40"
 date: 2015-03-27 23:18:09
 tags: [Linux, Java]
+categories: 技术
 ---
 
 采用 oracle jdk 压缩版本进行安装，无废话，直接上干货。<!-- more -->

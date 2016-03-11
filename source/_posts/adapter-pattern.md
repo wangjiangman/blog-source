@@ -1,6 +1,7 @@
 title: "设计模式学习 - Adapter Pattern"
 date: 2013-01-18
 tags: 设计模式
+categories: 技术
 ---
 
 Adapter Pattern 用以解决当前类和目标接口不匹配的情况，他通过增加一个适配类来是当前类和目标接口达成一致。结构如下：

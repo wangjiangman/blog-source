@@ -1,6 +1,7 @@
 title: "Oracle 用户相关操作"
 date: 2015-09-07
 tags: [Oracle]
+categories: 技术
 ---
 
 这里记录一下 Oracle 中用户相关的操作。 <!--more-->

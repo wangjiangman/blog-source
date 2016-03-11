@@ -1,6 +1,7 @@
 title: "折腾 Ubuntu"
 date: 2013-01-14
 tags: Ubuntu
+categories: 技术
 ---
 
 最近开始学习使用ubuntu，于是在virtual box上安装了ubuntu server来折腾，安装的时候，什么都没有默认安装，所以什么都需要自己手动来安装，顺便学习一下ubuntu。<!--more-->

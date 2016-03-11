@@ -1,6 +1,7 @@
 title: "innerHTML在ie,firefox,chrome的区别"
 date: 2013-01-13
 tags: 前端开发
+categories: 技术
 ---
 
 最近在用javascript 写一个代码语法高亮工具，由于取代码部分的时候需要用到innerHTML属性，发现了IE6, IE7, IE8与IE9, firefox, chrome对innerHTML实现的不同。现在IE9已经属于现代浏览器了，实现方式已经和firefox, chrome一致。下面说说区别：

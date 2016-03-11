@@ -1,6 +1,7 @@
 title: "使用keytools 为 tomcat 7 配置ssl 双向认证"
 date: 2013-07-19
 tags: Java
+categories: 技术
 ---
 
 ## 第一、证书库、证书等生成

@@ -1,6 +1,7 @@
 title: "scp 命令"
 date: 2015-09-12
 tags: [Linux]
+categories: 技术
 ---
 
 <code>scp</code> 命令用于在不同 linux 机器之间拷贝/复制文件、目录，是 <code>cp</code> 命令的加强版。 <!--more-->

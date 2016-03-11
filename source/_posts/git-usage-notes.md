@@ -1,6 +1,7 @@
 title: "Git 使用汇总"
 date: 2013-01-11
 tags: git
+categories: 技术
 ---
 
 ### git 基本操作命令

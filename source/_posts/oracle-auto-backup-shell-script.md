@@ -1,6 +1,7 @@
 title: "Oracle 自动备份脚本"
 date: 2015-06-18
 tags: [Linux, Oracle]
+categories: 技术
 ---
 
 本脚本的主要思路是通过 oracle 字典的 exp 命令将数据库导出为 dmp 文件，然后将 dmp 文件打包压缩成 tar.gz 文件，最后将文件 ftp 到远程服务器上。

@@ -1,6 +1,7 @@
 title: "slf4j + log4j 2 配置"
 date: 2015-06-30
 tags: Java
+categories: 技术
 ---
 
 

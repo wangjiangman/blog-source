@@ -1,6 +1,7 @@
 title: "设计模式学习 - Facade Pattern"
 date: 2013-01-08
 tags: 设计模式
+categories: 技术
 ---
 
 Facade Pattern 被译成门面模式。他的目的就是想对外部用户隐藏系统/模块/类的复杂性，提供给用户一个简单易用的使用接口。<!--more-->

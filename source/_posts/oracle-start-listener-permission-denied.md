@@ -1,6 +1,7 @@
 title: "Linux 下 ORACLE 启动侦听报错 TNS:permission denied"
 date: 2015-04-02 09:00:00
 tags:
+categories: 技术
 ---
 
 

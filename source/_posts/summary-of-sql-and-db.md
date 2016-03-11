@@ -1,6 +1,7 @@
 title: "SQL & DB 一些 总结"
 date: 2013-01-21
 tags: sql & db
+categories: 技术
 ---
 
 ## 不要使用 select *

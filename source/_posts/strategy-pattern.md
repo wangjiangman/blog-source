@@ -1,6 +1,7 @@
 title: "设计模式学习 - Strategy Pattern"
 date: 2013-02-27
 tags: 设计模式
+categories: 技术
 ---
 
 Strategy Pattern （策略模式）是对一系列可以替换的策略（算法）进行抽象，具体算法继承与抽象，在不同的场景下可以选择不同的算法，这样的好处就是将策略的使用者与具体的策略解耦。 <!--more-->

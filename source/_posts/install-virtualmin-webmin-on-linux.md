@@ -1,6 +1,7 @@
 title: "linux 上安装 virtualmin/webmin"
 date: 2013-03-06
 tags: Linux
+categories: 技术
 ---
 Webmin是一个可视化的linux管理工具，囊括了所有的linux管理功能；而Virtualmin则是基于webmin的网站虚拟主机管理面板，可以很方便的帮助我们建站（FTP，Apache、mysql、php等）。这里说一下如何在linux系统上安装virtualmin和webmin。
 

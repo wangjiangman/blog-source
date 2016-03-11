@@ -1,6 +1,7 @@
 title: "Java Lambda 表达式学习笔记"
 date: 2016-02-24
 tags: [Java, Lambda]
+categories: 技术
 ---
 
 Java Lambda 表达式是 Java 8 引入的一个新的功能，可以说是模拟函数式编程的一个语法糖，类似于 Javascript 中的闭包，但又有些不同，主要目的是提供一个函数化的语法来简化我们的编码。<!--more-->

@@ -1,6 +1,7 @@
 title: "Mysql 配置主从复制"
 date: 2016-01-18
 tags: [Linux,Mysql]
+categories: 技术
 ---
 
 Mysql 5.7.10 配置主从复制的步骤很简单，这里记录下配置全新的主从复制的步骤。<!--more-->

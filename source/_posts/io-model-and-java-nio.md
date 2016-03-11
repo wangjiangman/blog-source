@@ -1,6 +1,7 @@
 title: "I/O概念 & I/O模型 & Java nio 知识整理"
 date: 2012-12-20
 tags: [blocking,io,nio]
+categories: 技术
 ---
 
 最近在看java nio相关的资料，最初的看的一头雾水，很对东西模棱两可，于是网上查了些I/O的资料，本文是自己对I/O的一个理解。<!--more-->

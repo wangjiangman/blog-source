@@ -1,6 +1,7 @@
 title: "设计模式学习 - Null Object Pattern"
 date: 2013-01-31
 tags: 设计模式
+categories: 技术
 ---
 
 Null Object Pattern （空对象模式）是在某些场景下，使用一个 Null Object 来代替返回的 null, 通过这个 NullObject，使用者能够像使用普通对象一样，而不需要 null 判断，让逻辑更顺畅，让代码看起来很干净，很清爽。

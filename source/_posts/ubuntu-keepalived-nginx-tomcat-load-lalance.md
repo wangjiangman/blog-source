@@ -1,6 +1,7 @@
 title: "Ubuntu下配置 keepalived+nginx+tomcat 负载均衡"
 date: 2014-06-29
 tags: 运维
+categories: 技术
 ---
 
 本文力图阐述在 Ubuntu Server 环境下使用 Keepalived + Nginx + Tomcat 搭建高可用负载均衡环境的操作步骤和简约配置，这里不涉及性能调优。<!--more-->

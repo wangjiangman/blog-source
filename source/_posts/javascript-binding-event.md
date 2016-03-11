@@ -1,6 +1,7 @@
 title: "利用javascript事件的特性高效的为子元素绑定操作"
 date: 2013-03-11
 tags: Web Front
+categories: 技术
 ---
 
 有这样一道javascript题目：在如下dom结构中，如何高效的给li元素绑定click事件，在用户单击li元素时能够提示li中的内容？

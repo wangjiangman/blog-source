@@ -1,6 +1,7 @@
 title: "Java Stream 学习笔记"
 date: 2016-02-26
 tags: [Java, Lambda]
+categories: 技术
 ---
 
 什么是 Stream ? 这里的 Stream 不同于 io 中的 InputStream 和 OutputStream，Stream 位于包 java.util.stream 中， 也是 java 8 新加入的，Stream 只的是一组支持串行并行聚合操作的元素，可以理解为集合或者迭代器的增强版。<!--more-->

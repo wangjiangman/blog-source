@@ -1,6 +1,7 @@
 title: "简述HTTP协议"
 date: 2013-01-06
 tags: http
+categories: 技术
 ---
 ## 什么是协议？
 

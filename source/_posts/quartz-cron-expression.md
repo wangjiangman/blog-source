@@ -1,6 +1,7 @@
 title: "Quartz Cron Expression"
 date: 2013-01-11
 tags: Quartz
+categories: 技术
 ---
 
 ## 表达式格式及字段说明

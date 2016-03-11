@@ -1,6 +1,7 @@
 title: "Apache CXF wsdl2java 生成客户端简单用法"
 date: 2015-03-25
 tags: [Java, WebService]
+categories: 技术
 ---
 
 cxf中带的工具包 wsdl2java 很方便的帮我们生成客户端程序，使用方式如下：

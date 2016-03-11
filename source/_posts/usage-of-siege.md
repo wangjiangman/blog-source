@@ -1,6 +1,7 @@
 title: "压力测试工具siege的用法"
 date: 2013-01-08
 tags: [压力测试,siege]
+categories: 技术
 ---
 Siege是linux下的一个web系统的压力测试工具，支持多链接，支持get和post请求，可以对web系统进行多并发下持续请求的压力测试。<!--more-->
 

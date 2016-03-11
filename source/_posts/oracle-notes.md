@@ -1,6 +1,7 @@
 title: "oracle 学习笔记"
 date: 2015-04-06
 tags: [Oracle]
+categories: 技术
 ---
 
 ## 常用命令

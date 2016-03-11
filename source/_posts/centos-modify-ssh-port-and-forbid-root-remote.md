@@ -1,6 +1,7 @@
 title: "centos 6.5 修改 SSH 端口并禁用 root 远程登录"
 date: 2015-08-12
 tags: [Linux, Oracle]
+categories: 技术
 ---
 
 我们知道 SSH 的默认端口为 22，但是基于安全的需要，我们需要修改服务器的 SSH 端口，和禁用 root 远程登录。 
