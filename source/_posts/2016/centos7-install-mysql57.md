@@ -23,13 +23,19 @@ systemctl start mysqld
 
 ## 修改数据库编码为 utf8
 
-```
-vi /etc/my.cnf
+修改 /etc/my.cnf, [mysqld] 分组下添加如下两行
 
-# [mysqld] 分组下添加如下两行
+```
 character-set-server=utf8
 collation_server=utf8_unicode_ci
+```
 
+## 修改表名字段不区分大小写
+
+修改 /etc/my.cnf, [mysqld] 分组下添加如下行
+
+```
+lower_case_tables_name=1
 ```
 
 ## 重启
