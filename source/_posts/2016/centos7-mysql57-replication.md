@@ -30,7 +30,7 @@ server-id=1
 [root@centos7-1 ~]# mysql -u root -p
 Enter password: 
 
-mysql> CREATE USER 'repl'@'%' IDENTIFIED BY 'Sujia100.com';
+mysql> CREATE USER 'repl'@'%' IDENTIFIED BY 'password';
 mysql> GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%';
 ```
 
@@ -76,7 +76,7 @@ mysql>
 mysql> CHANGE MASTER TO
     -> MASTER_HOST='192.168.0.180',
     -> MASTER_USER='repl',
-    -> MASTER_PASSWORD='Sujia100.com',
+    -> MASTER_PASSWORD='password',
     -> MASTER_LOG_FILE='mysql-bin.000001',
     -> MASTER_LOG_POS=595;
 Query OK, 0 rows affected, 2 warnings (0.02 sec)
