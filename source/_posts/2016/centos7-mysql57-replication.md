@@ -34,6 +34,8 @@ mysql> CREATE USER 'repl'@'%' IDENTIFIED BY 'password';
 mysql> GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%';
 ```
 
+### 查看日志文件和位置
+
 ```sql
 mysql> FLUSH TABLES WITH READ LOCK;
 Query OK, 0 rows affected (0.00 sec)
