@@ -34,9 +34,19 @@ DB or NoSQL
 - Redis
 - Memcached
 
+搜索
+- solr
+- Elasticsearch
+- Lucene
+
+http://www.iigrowing.cn/solr-zong-jie.html
+
 服务器
 - Tomcat 
 - Nginx
+
+分布式
+- Zookeeper
 
 构建与部署
 - mvn
