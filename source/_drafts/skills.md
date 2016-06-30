@@ -41,6 +41,7 @@ DB or NoSQL
 
 http://www.iigrowing.cn/solr-zong-jie.html
 https://www.ibm.com/developerworks/cn/java/j-lo-Spring-Elasticsearch-Logstash/
+http://www.cnblogs.com/smartloli/p/4654973.html
 
 服务器
 - Tomcat 
