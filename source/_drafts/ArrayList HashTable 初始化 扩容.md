@@ -12,18 +12,18 @@ public ArrayList() {
 ```
 
 ```java
-    public void ensureCapacity(int minCapacity) {
-        int minExpand = (elementData != EMPTY_ELEMENTDATA)
-            // any size if real element table
-            ? 0
-            // larger than default for empty table. It's already supposed to be
-            // at default size.
-            : DEFAULT_CAPACITY;
+public void ensureCapacity(int minCapacity) {
+    int minExpand = (elementData != EMPTY_ELEMENTDATA)
+        // any size if real element table
+        ? 0
+        // larger than default for empty table. It's already supposed to be
+        // at default size.
+        : DEFAULT_CAPACITY;
 
-        if (minCapacity > minExpand) {
-            ensureExplicitCapacity(minCapacity);
-        }
+    if (minCapacity > minExpand) {
+        ensureExplicitCapacity(minCapacity);
     }
+}
 ```
     
 
