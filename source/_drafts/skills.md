@@ -40,6 +40,7 @@ DB or NoSQL
 - Lucene
 
 http://www.iigrowing.cn/solr-zong-jie.html
+https://www.ibm.com/developerworks/cn/java/j-lo-Spring-Elasticsearch-Logstash/
 
 服务器
 - Tomcat 
