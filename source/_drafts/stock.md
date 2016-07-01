@@ -25,3 +25,5 @@ http://gold.xitu.io/entry/56e0e158816dfa0051da43b8
 
 
 http://coolshell.cn/articles/6790.html
+
+Multiversion concurrency control，MVCC 多版本并发控制
