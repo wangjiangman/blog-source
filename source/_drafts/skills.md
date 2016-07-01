@@ -39,6 +39,13 @@ DB or NoSQL
 - Elasticsearch
 - Lucene
 
+消息队列
+- JMS
+- ActiveMQ
+- ZeroMQ
+- RabbitMQ
+- Redis 也可以用作消息队列
+
 http://www.iigrowing.cn/solr-zong-jie.html
 https://www.ibm.com/developerworks/cn/java/j-lo-Spring-Elasticsearch-Logstash/
 http://www.cnblogs.com/smartloli/p/4654973.html
