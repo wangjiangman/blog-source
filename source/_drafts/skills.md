@@ -45,6 +45,7 @@ DB or NoSQL
 - ZeroMQ
 - RabbitMQ
 - Redis 也可以用作消息队列
+- kafka
 
 http://www.iigrowing.cn/solr-zong-jie.html
 https://www.ibm.com/developerworks/cn/java/j-lo-Spring-Elasticsearch-Logstash/
