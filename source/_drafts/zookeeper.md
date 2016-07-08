@@ -200,3 +200,59 @@ iptables -I INPUT 13 -m state --state NEW,ESTABLISHED -p tcp --dport 3890 -j ACC
 zookeeper 带了客户端程序能方便的连接到 zookeeper 服务 ： ~/apps/zookeeper-3.4.8/bin/zkCli.sh
 
 用法为 zkCli.sh -server SERVER_HOST:PORT 
+
+```shell
+[zookeeper@localhost ~]$ zkCli.sh -server 127.0.0.1:2181
+Connecting to 127.0.0.1:2181
+2016-07-08 02:17:23,255 [myid:] - INFO  [main:Environment@100] - Client environment:zookeeper.version=3.4.8--1, built on 02/06/2016 03:18 GMT
+2016-07-08 02:17:23,258 [myid:] - INFO  [main:Environment@100] - Client environment:host.name=localhost
+2016-07-08 02:17:23,258 [myid:] - INFO  [main:Environment@100] - Client environment:java.version=1.8.0_92
+2016-07-08 02:17:23,260 [myid:] - INFO  [main:Environment@100] - Client environment:java.vendor=Oracle Corporation
+2016-07-08 02:17:23,260 [myid:] - INFO  [main:Environment@100] - Client environment:java.home=/opt/java/jdk1.8.0_92/jre
+2016-07-08 02:17:23,260 [myid:] - INFO  [main:Environment@100] - Client environment:java.class.path=/home/zookeeper/apps/zookeeper-3.4.8/bin/../build/classes:/home/zookeeper/apps/zookeeper-3.4.8/bin/../build/lib/*.jar:/home/zookeeper/apps/zookeeper-3.4.8/bin/../lib/slf4j-log4j12-1.6.1.jar:/home/zookeeper/apps/zookeeper-3.4.8/bin/../lib/slf4j-api-1.6.1.jar:/home/zookeeper/apps/zookeeper-3.4.8/bin/../lib/netty-3.7.0.Final.jar:/home/zookeeper/apps/zookeeper-3.4.8/bin/../lib/log4j-1.2.16.jar:/home/zookeeper/apps/zookeeper-3.4.8/bin/../lib/jline-0.9.94.jar:/home/zookeeper/apps/zookeeper-3.4.8/bin/../zookeeper-3.4.8.jar:/home/zookeeper/apps/zookeeper-3.4.8/bin/../src/java/lib/*.jar:/home/zookeeper/apps/zookeeper-3.4.8/bin/../conf:.
+2016-07-08 02:17:23,260 [myid:] - INFO  [main:Environment@100] - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2016-07-08 02:17:23,260 [myid:] - INFO  [main:Environment@100] - Client environment:java.io.tmpdir=/tmp
+2016-07-08 02:17:23,260 [myid:] - INFO  [main:Environment@100] - Client environment:java.compiler=<NA>
+2016-07-08 02:17:23,260 [myid:] - INFO  [main:Environment@100] - Client environment:os.name=Linux
+2016-07-08 02:17:23,260 [myid:] - INFO  [main:Environment@100] - Client environment:os.arch=amd64
+2016-07-08 02:17:23,260 [myid:] - INFO  [main:Environment@100] - Client environment:os.version=3.10.0-327.22.2.el7.x86_64
+2016-07-08 02:17:23,260 [myid:] - INFO  [main:Environment@100] - Client environment:user.name=zookeeper
+2016-07-08 02:17:23,260 [myid:] - INFO  [main:Environment@100] - Client environment:user.home=/home/zookeeper
+2016-07-08 02:17:23,260 [myid:] - INFO  [main:Environment@100] - Client environment:user.dir=/home/zookeeper
+2016-07-08 02:17:23,261 [myid:] - INFO  [main:ZooKeeper@438] - Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=30000 watcher=org.apache.zookeeper.ZooKeeperMain$MyWatcher@506c589e
+Welcome to ZooKeeper!
+2016-07-08 02:17:23,336 [myid:] - INFO  [main-SendThread(127.0.0.1:2181):ClientCnxn$SendThread@1032] - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+JLine support is enabled
+2016-07-08 02:17:23,390 [myid:] - INFO  [main-SendThread(127.0.0.1:2181):ClientCnxn$SendThread@876] - Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+[zk: 127.0.0.1:2181(CONNECTING) 0] 2016-07-08 02:17:23,644 [myid:] - INFO  [main-SendThread(127.0.0.1:2181):ClientCnxn$SendThread@1299] - Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x155c91f63ed0000, negotiated timeout = 30000
+
+WATCHER::
+
+WatchedEvent state:SyncConnected type:None path:null
+ 
+[zk: 127.0.0.1:2181(CONNECTED) 0] 
+```
+
+已经连接成功了, 迫不及待拿几个命令试一下 
+
+```shell
+[zk: 127.0.0.1:2181(CONNECTED) 0] ls /
+[note, conf, sgroup, servers, zookeeper]
+[zk: 127.0.0.1:2181(CONNECTED) 4] create /test "this is a test node"
+Created /test
+[zk: 127.0.0.1:2181(CONNECTED) 5] get /test
+this is a test node
+cZxid = 0x800000002
+ctime = Fri Jul 08 02:22:58 EDT 2016
+mZxid = 0x800000002
+mtime = Fri Jul 08 02:22:58 EDT 2016
+pZxid = 0x800000002
+cversion = 0
+dataVersion = 0
+aclVersion = 0
+ephemeralOwner = 0x0
+dataLength = 19
+numChildren = 0
+```
+
+到此, 结束了.
