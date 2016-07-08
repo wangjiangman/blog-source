@@ -1,33 +1,60 @@
-需要有  java 环境
+本文回顾一下以前学习 zookeeper 的笔记，简单记录下 zookeeper 安装和配置步骤，以及简单的操作命令。 
 
-http://buzheng.org/centos-65-install-oracle-jdk-8.html
+<!--more-->
 
-创建用户 
+## 安装 Java 环境
 
+zookeeper 需要 Java 环境的支持，所以先要有 java 环境，刚好以前写过一篇如何安装java的笔记，参看：http://buzheng.org/centos-65-install-oracle-jdk-8.html
+
+## 创建用户 
+
+为了方便演示，所有的操作都在 zookeeper 用户下进行。
+
+```shell
 useradd zookeeper
+```
 
-下载
+## 下载 & 安装
 
+```shell
 wget http://mirror.bit.edu.cn/apache/zookeeper/zookeeper-3.4.8/zookeeper-3.4.8.tar.gz
+```
 
+下载完成后解压到 ~/apps/zookeeper-3.4.8
 
-解压缩
+## 配置集群
 
-/home/zookeeper/apps/zookeeper-3.4.8
+这里安装是 zookeeper 集群， 由于服务器有限，多个节点安装在一台服务器上，每个节点通过端口来区分
 
-创建节点目录
+### 创建节点目录
 
+```shell
 mkdir /home/zookeeper/nodes/zk1
 mkdir /home/zookeeper/nodes/zk2
 mkdir /home/zookeeper/nodes/zk3
+```
 
+### 为节点创建 myid 文件
+
+myid 文件用来存储本节点服务器ID，这个ID与后面配置文件中 server.ID 必须保持一致。
+
+```shell
 echo "1" > /home/zookeeper/nodes/zk1/myid
 echo "2" > /home/zookeeper/nodes/zk2/myid
 echo "3" > /home/zookeeper/nodes/zk3/myid
+```
 
-myid 文件用来存储本节点服务器ID
+### 配置文件
 
-配置文件
+**节点1**
+
+节点1的对外服务端口为 2181。
+
+集群的配置格式为：server.ID:NODE_HOST:port1:port2 , 说明如下：
+- ID 与每个节点 myid 中的配置必须保持一致
+- NODE_HOST 每个节点的主机地址
+- port1 为 follower 节点连接到 leader 节点的端口号
+- port2 为 leadership 选举的端口号
 
 ```
 vi /home/zookeeper/nodes/zk1/zoo.cfg
@@ -42,6 +69,8 @@ server.2=192.168.0.211:2889:3889
 server.3=192.168.0.211:2890:3890
 ```
 
+**节点2**
+
 ```
 vi /home/zookeeper/nodes/zk2/zoo.cfg
 tickTime=2000
@@ -54,6 +83,8 @@ server.1=192.168.0.211:2888:3888
 server.2=192.168.0.211:2889:3889
 server.3=192.168.0.211:2890:3890
 ```
+
+**节点2**
 
 ```
 vi /home/zookeeper/nodes/zk3/zoo.cfg
@@ -68,11 +99,11 @@ server.2=192.168.0.211:2889:3889
 server.3=192.168.0.211:2890:3890
 ```
 
-/home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh 
+## 操作命令
 
-命令用法： zkServer.sh 操作选项 [配置文件]
+操作命令位于 bin目录下： /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh 
 
-如果不提供配置文件会默认使用安装目录下 conf 下的 zoo.cfg 
+命令用法： zkServer.sh 操作选项 [配置文件] , 配置文件会默认使用安装目录下 conf 下的 zoo.cfg 
 
 关于操作选项，有下面几个选项
 
@@ -83,23 +114,64 @@ server.3=192.168.0.211:2890:3890
 - status 查看状态
 - upgrade 升级
 
-启动
+### 启动
 
-```
+以下命令逐个启动每个节点
+
+```shell
 /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh start /home/zookeeper/nodes/zk1/zoo.cfg
 /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh start /home/zookeeper/nodes/zk2/zoo.cfg
 /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh start /home/zookeeper/nodes/zk3/zoo.cfg
 ```
 
-查看状态
+输入如下：
 
+```shell
+[zookeeper@localhost ~]$ /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh start /home/zookeeper/nodes/zk1/zoo.cfg
+ZooKeeper JMX enabled by default
+Using config: /home/zookeeper/nodes/zk1/zoo.cfg
+Starting zookeeper ... STARTED
+[zookeeper@localhost ~]$ /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh start /home/zookeeper/nodes/zk2/zoo.cfg
+ZooKeeper JMX enabled by default
+Using config: /home/zookeeper/nodes/zk2/zoo.cfg
+Starting zookeeper ... STARTED
+[zookeeper@localhost ~]$ /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh start /home/zookeeper/nodes/zk3/zoo.cfg
+ZooKeeper JMX enabled by default
+Using config: /home/zookeeper/nodes/zk3/zoo.cfg
+Starting zookeeper ... STARTED
 ```
+
+注意 STARTED 是表示启动成功了，有时候启动成功了，并不表示各个节点之间的集群通信没有问题，如果需要排查错误，请使用 start-foreground 选项，这样就能一目了然的发现问题。
+
+### 查看状态
+
+```shell
 /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh status /home/zookeeper/nodes/zk1/zoo.cfg
 /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh status /home/zookeeper/nodes/zk2/zoo.cfg
 /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh status /home/zookeeper/nodes/zk3/zoo.cfg
 ```
 
-停止
+输出如下：
+
+```shell
+[zookeeper@localhost ~]$ /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh status /home/zookeeper/nodes/zk1/zoo.cfg
+okeeper/nodes/zk3/zoo.cfg
+ZooKeeper JMX enabled by default
+Using config: /home/zookeeper/nodes/zk1/zoo.cfg
+Mode: follower
+[zookeeper@localhost ~]$ /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh status /home/zookeeper/nodes/zk2/zoo.cfg
+ZooKeeper JMX enabled by default
+Using config: /home/zookeeper/nodes/zk2/zoo.cfg
+Mode: leader
+[zookeeper@localhost ~]$ /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh status /home/zookeeper/nodes/zk3/zoo.cfg
+ZooKeeper JMX enabled by default
+Using config: /home/zookeeper/nodes/zk3/zoo.cfg
+Mode: follower
+```
+
+从这里看出，节点2被选为leader。
+
+### 停止
 
 ```
 /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh stop /home/zookeeper/nodes/zk1/zoo.cfg
@@ -107,3 +179,24 @@ server.3=192.168.0.211:2890:3890
 /home/zookeeper/apps/zookeeper-3.4.8/bin/zkServer.sh stop /home/zookeeper/nodes/zk3/zoo.cfg
 ```
 
+## 开通端口
+
+为了对外提供服务，别忘了把端口好都加入到防火墙中
+
+```shell
+iptables -I INPUT 5 -m state --state NEW,ESTABLISHED -p tcp --dport 2181 -j ACCEPT
+iptables -I INPUT 6 -m state --state NEW,ESTABLISHED -p tcp --dport 2182 -j ACCEPT
+iptables -I INPUT 7 -m state --state NEW,ESTABLISHED -p tcp --dport 2183 -j ACCEPT
+iptables -I INPUT 8 -m state --state NEW,ESTABLISHED -p tcp --dport 2888 -j ACCEPT
+iptables -I INPUT 9 -m state --state NEW,ESTABLISHED -p tcp --dport 3888 -j ACCEPT
+iptables -I INPUT 10 -m state --state NEW,ESTABLISHED -p tcp --dport 2889 -j ACCEPT
+iptables -I INPUT 11 -m state --state NEW,ESTABLISHED -p tcp --dport 3889 -j ACCEPT
+iptables -I INPUT 12 -m state --state NEW,ESTABLISHED -p tcp --dport 2890 -j ACCEPT
+iptables -I INPUT 13 -m state --state NEW,ESTABLISHED -p tcp --dport 3890 -j ACCEPT
+```
+
+## 连接 zookeeper
+
+zookeeper 带了客户端程序能方便的连接到 zookeeper 服务 ： ~/apps/zookeeper-3.4.8/bin/zkCli.sh
+
+用法为 zkCli.sh -server SERVER_HOST:PORT 
