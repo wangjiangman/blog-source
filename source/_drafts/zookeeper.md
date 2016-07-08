@@ -24,7 +24,7 @@ wget http://mirror.bit.edu.cn/apache/zookeeper/zookeeper-3.4.8/zookeeper-3.4.8.t
 
 ## 配置集群
 
-这里安装是 zookeeper 集群， 由于服务器有限，多个节点安装在一台服务器上，每个节点通过端口来区分
+这里安装是 zookeeper 集群， 由于服务器有限，多个节点安装在一台服务器上，每个节点通过端口来区分.
 
 ### 创建节点目录
 
