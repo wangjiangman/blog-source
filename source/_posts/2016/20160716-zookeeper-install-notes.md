@@ -1,3 +1,9 @@
+title: "ZooKeeper 集群安装笔记"
+date: 2016-07-16
+tags: [ZooKeeper, 分布式]
+categories: 技术
+---
+
 本文回顾一下以前学习 zookeeper 的笔记，简单记录下 zookeeper 安装和配置步骤，以及简单的操作命令。 
 
 <!--more-->
