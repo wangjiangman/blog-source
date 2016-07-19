@@ -19,6 +19,7 @@ Java
 - Restful Api
 - Http Api
 - Socket
+- Thrift (需要学习一下)
 
 EBS 
 - dubbo
