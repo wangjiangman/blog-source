@@ -19,6 +19,7 @@ Java
 - Restful Api
 - Http Api
 - Socket
+- Thrift (需要学习一下)
 
 EBS 
 - dubbo
@@ -66,3 +67,10 @@ http://www.cnblogs.com/smartloli/p/4654973.html
 版本控制
 - svn
 - git
+
+其他 
+- Swagger 自动生成 rest api 文档的工具， 管理服务接口
+
+微服务之间通信
+- 点对点 弊端很多，无法监控，通用逻辑重复等
+- API网关，访问所有服务都通过网关，服务之间也通过网关
