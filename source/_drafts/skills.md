@@ -82,8 +82,8 @@ http://www.cnblogs.com/smartloli/p/4654973.html
 
 一个场景，就是生成报表的时候，需要多次读取数据库的数据，但是第二次读取和第一次读取可能存在脏数据，这时候就需要只读事务来保证只读取一个时间节点的数据。
 
--http://san-yun.iteye.com/blog/494405
--http://www.cnblogs.com/zhoujinyi/p/3437475.html
+- http://san-yun.iteye.com/blog/494405
+- http://www.cnblogs.com/zhoujinyi/p/3437475.html
 
 聚集索引
 
