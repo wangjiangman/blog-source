@@ -31,6 +31,10 @@ DB or NoSQL
 - Redis
 - Memcached
 
+DB 中间件
+
+- 360 Altas 
+
 缓存
 - Redis
 - Memcached
@@ -55,6 +59,19 @@ http://www.cnblogs.com/smartloli/p/4654973.html
 服务器
 - Tomcat 
 - Nginx
+
+负载均衡
+
+- Nginx + Tomcat 
+
+nginx 做反向代理，和静态服务器
+
+
+高可用
+
+- Keepalived
+- 360 Altas + Keepalived
+- Nginx + Keepalived
 
 分布式
 - Zookeeper
