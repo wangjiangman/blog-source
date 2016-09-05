@@ -4,7 +4,7 @@
 
 # Site
 title: 不争
-subtitle: 写给自己看......
+subtitle: 
 description:
 author: 不争
 language: zh-Hans
@@ -40,7 +40,7 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: "    "
 
@@ -91,3 +91,5 @@ duoshuo_shortname: buzheng
 avatar: /images/logo.gif
 
 google_site_verification: RTk-VnUHB3E9eD4XtV5tt6O54NvVUSDMsP-MT6SMEV0
+
+google_analytics: UA-33257508-1
