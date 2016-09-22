@@ -4,7 +4,7 @@
 
 ### insert  & save 
 
-```
+```javascript
 db.user.insert({name: "wangwu", age: 30, hobby: ["billiards", "coding"]});
 db.user.save({name: "zhangsan", age: 20, hobby: ["basketball", "football", "writing"]});
 db.user.save({name: "lisi", age: 25, hobby: ["football", "swimming"]});
@@ -14,32 +14,37 @@ insert 和 save 都能保存数据，区别在于，如果保存的实体如果�
 
 ### update
 
-```
+```javascript
 db.user.update({name:"wangwu"}, {$set: {age: 28}});
 db.user.update({name:"wangwu"}, {$set: {age: 28}}, upsert=true, multi=true);
 ```
 
 ### remove 
 
-```
+```javascript
 db.user.remove({name:"wangwu"});
 ```
 
 ### find
 
-```
+```javascript
 db.user.find();
 db.user.find({age: {$gt: 20}});
 ```
 
 fields
 
-```
+```javascript
 db.user.find({age: {$gt: 20}}, {name:1});
 db.user.find({age: {$gt: 20}}, {name:0});
 db.user.find({age: {$gt: 20}}, {name:0, age:0});
 ```
 
+sort 
+
+```javascript
+db.user.find().sort({age:1});   // 1 asc  0r -1 desc
+```
 
 
 ## 管理相关命令
