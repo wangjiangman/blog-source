@@ -2,6 +2,44 @@
 
 ## 增删改查
 
+### insert  & save 
+
+```
+db.user.insert({name: "wangwu", age: 30, hobby: ["billiards", "coding"]});
+db.user.save({name: "zhangsan", age: 20, hobby: ["basketball", "football", "writing"]});
+db.user.save({name: "lisi", age: 25, hobby: ["football", "swimming"]});
+```
+
+insert 和 save 都能保存数据，区别在于，如果保存的实体如果带有ID的话，save会直接覆盖现有ID对应的实体类。
+
+### update
+
+```
+db.user.update({name:"wangwu"}, {$set: {age: 28}});
+db.user.update({name:"wangwu"}, {$set: {age: 28}}, upsert=true, multi=true);
+```
+
+### remove 
+
+```
+db.user.remove({name:"wangwu"});
+```
+
+### find
+
+```
+db.user.find();
+db.user.find({age: {$gt: 20}});
+```
+
+fields
+
+```
+db.user.find({age: {$gt: 20}}, {name:1});
+db.user.find({age: {$gt: 20}}, {name:0});
+db.user.find({age: {$gt: 20}}, {name:0, age:0});
+```
+
 
 
 ## 管理相关命令
