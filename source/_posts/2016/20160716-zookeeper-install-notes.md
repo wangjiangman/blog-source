@@ -10,7 +10,7 @@ categories: 技术
 
 ## 安装 Java 环境
 
-zookeeper 需要 Java 环境的支持，所以先要有 java 环境，刚好以前写过一篇如何安装java的笔记，参看：http://buzheng.org/centos-65-install-oracle-jdk-8.html
+zookeeper 需要 Java 环境的支持，所以先要有 java 环境，刚好以前写过一篇如何安装java的笔记，参看：https://buzheng.org/centos-65-install-oracle-jdk-8.html
 
 ## 创建用户 
 

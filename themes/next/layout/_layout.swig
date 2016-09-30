@@ -7,6 +7,11 @@
 
 <html class="{{ html_class | lower }}">
 <head>
+  <script type="text/javascript">
+    var host = "buzheng.org";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+      window.location.protocol = "https";
+  </script>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
 </head>
