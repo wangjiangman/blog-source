@@ -22,7 +22,7 @@ useradd zookeeper
 
 ## 下载 & 安装
 
-```shell
+```bash
 wget http://mirror.bit.edu.cn/apache/zookeeper/zookeeper-3.4.8/zookeeper-3.4.8.tar.gz
 ```
 
