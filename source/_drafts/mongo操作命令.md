@@ -40,7 +40,7 @@ db.user.find({age: {$gt: 20}}, {name:0});
 db.user.find({age: {$gt: 20}}, {name:0, age:0});
 ```
 
-sort 
+### sort 
 
 ```javascript
 db.user.find().sort({age:1});   // 1 asc  0r -1 desc
