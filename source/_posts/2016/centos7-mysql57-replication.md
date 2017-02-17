@@ -77,6 +77,7 @@ mysql>
 mysql> 
 mysql> CHANGE MASTER TO
     -> MASTER_HOST='192.168.0.180',
+    -> MASTER_PORT='3306',
     -> MASTER_USER='repl',
     -> MASTER_PASSWORD='password',
     -> MASTER_LOG_FILE='mysql-bin.000001',

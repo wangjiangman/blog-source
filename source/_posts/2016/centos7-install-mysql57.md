@@ -35,7 +35,7 @@ collation_server=utf8_unicode_ci
 修改 /etc/my.cnf, [mysqld] 分组下添加如下行
 
 ```
-lower_case_tables_name=1
+lower_case_table_names=1
 ```
 
 ## 重启
