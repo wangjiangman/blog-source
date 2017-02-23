@@ -19,6 +19,13 @@ db.user.update({name:"wangwu"}, {$set: {age: 28}});
 db.user.update({name:"wangwu"}, {$set: {age: 28}}, upsert=true, multi=true);
 ```
 
+删除某个字段
+
+```javascript
+db.User.update({},{$unset:{'FIELD_NAME':''}},false, true)
+```
+
+
 ### remove 
 
 ```javascript
