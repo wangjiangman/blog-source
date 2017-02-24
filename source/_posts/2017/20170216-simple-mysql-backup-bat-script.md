@@ -18,7 +18,7 @@ set host=xxx.xxx.xxx.xxx
 set port=3306
 set user=root
 set pass=root
-set dbname=boke_yydz
+set dbname=dataname
 set backupfile=E:\backup\db\%dbname%-%now%.sql
 
 E:\backup\mysql-5.7.13-winx64\bin\mysqldump -h%host% -P%port% -u%user% -p%pass% -c --add-drop-table %dbname% > %backupfile%
