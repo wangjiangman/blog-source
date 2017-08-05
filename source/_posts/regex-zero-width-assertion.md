@@ -8,7 +8,7 @@ categories: 技术
 
 根据断言字符串位于当前位置的前后关系，分为正向和反向断言，根据断言肯定和否定的语气，又有正向否定断言和反向否定断言。肯定即断言存在该字符串、否定即相反的意思：存在的不是该字符串，总之概念比较绕口，下表介绍的时候顺便给出英文：
 
-<table><tbody><tr><td>(?=X)</td><td>正向断言，假定该位置后跟的是Xzero-width positive lookahead</td></tr><tr><td>(?!X)</td><td>正向否定断言，假设该位置后跟的不是Xzero-width negative lookahead</td></tr><tr><td>(?&lt;=X)</td><td>反向断言，假设该位置前跟的是Xzero-width positive lookbehind</td></tr><tr><td>(?&lt;!X)</td><td>反向否定断言，假设该位置前跟的不是Xzero-width negative lookbehind</td></tr></tbody></table>
+<table><tbody><tr><td>(?=X)</td><td>正向断言，假定该位置后跟的是X, zero-width positive lookahead</td></tr><tr><td>(?!X)</td><td>正向否定断言，假设该位置后跟的不是X, zero-width negative lookahead</td></tr><tr><td>(?&lt;=X)</td><td>反向断言，假设该位置前跟的是X, zero-width positive lookbehind</td></tr><tr><td>(?&lt;!X)</td><td>反向否定断言，假设该位置前跟的不是X, zero-width negative lookbehind</td></tr></tbody></table>
 
 举例
 
