@@ -1,3 +1,10 @@
+title: "Bash Shell 的常用快捷键"
+date: 2017-08-05
+tags: [Linux, Bash]
+categories: 技术
+---
+
+对于 Bash 的快捷键一直了解很少，除了常用的 `CTRL + a`, `CTRL + e` 和 `CTRL + l`，其他的基本上都未使用过，这里记录一下（Mac 下请使用 ESC 代替 ALT）。<!--more-->
 
 **编辑命令**
 
